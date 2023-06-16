@@ -3,6 +3,7 @@ package com.myapps.quiz;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,10 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView totalQuestionsTextView;
-    TextView questionTextView;
-    Button ansA,ansB,ansC,ansD;
-    Button submitbtn;
+    TextView totalQuestionsTextView,questionTextView;
+    Button ansA,ansB,ansC,ansD,submitbtn;
 
     int score=0;
     int totalQuestion = QuestionAnswer.question.length;
@@ -47,13 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    @SuppressLint("ResourceType")
     @Override
     public void onClick(View v) {
 
-        ansA.setBackgroundColor(Color.DKGRAY);
-        ansB.setBackgroundColor(Color.DKGRAY);
-        ansC.setBackgroundColor(Color.DKGRAY);
-        ansD.setBackgroundColor(Color.DKGRAY);
+        ansA.setBackgroundResource(R.drawable.button2);
+        ansB.setBackgroundResource(R.drawable.button2);
+        ansC.setBackgroundResource(R.drawable.button2);
+        ansD.setBackgroundResource(R.drawable.button2);
 
         Button clickedButton = (Button) v;
         if (clickedButton.getId()==R.id.submit_btn){
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else {
             //choices button clicked
             selectedAnswer =clickedButton.getText().toString();
-            clickedButton.setBackgroundColor(Color.GRAY);
+            clickedButton.setBackgroundResource(R.drawable.button1);
         }
     }
 

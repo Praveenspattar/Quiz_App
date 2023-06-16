@@ -12,7 +12,7 @@ public class QuestionAnswer {
     public static String choices[][] = {
             {"Google","Apple","Nokia","Samsung"},
             {"Java","Kotlin","Notepad","Python"},
-            {"Rahul","Narendra modi","Sidramaya","Praveen"},
+            {"Rahul Gandhi","Narendra modi","Siddaramaya","Amit shah"},
             {"Google","Apple","Nokia","Samsung"}
     };
 
